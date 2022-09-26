@@ -1,0 +1,100 @@
+body {
+  background-color: #f6f7f8;
+}
+a {
+  color: #256aa9;
+}
+.btn-primary {
+  background-color: #256aa9;
+  border: none;
+}
+.header {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+    padding-left: 160px;
+    background-image: url(/media/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+#bouton-del {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/del.png) no-repeat center top;
+  cursor: pointer; /* hand-shaped cursor */
+  margin-top: 5px;
+}
+#bouton-del-gris {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/del_gris.png) no-repeat center top;
+}
+#bouton-qrcode {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  cursor: pointer; /* hand-shaped cursor */
+  margin-top: 0px;
+  margin-left: 15px;
+}
+#bouton-mod {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/pen.png) no-repeat center top;
+  cursor: pointer; /* hand-shaped cursor */
+  margin-top: 5px;
+}
+#bouton-reader {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/eye.png) no-repeat center top;
+  cursor: pointer; /* hand-shaped cursor */
+}
+#bouton-user {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/user.png) no-repeat center top;
+  cursor: pointer; /* hand-shaped cursor */
+}
+#bouton-gest {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/gest.png) no-repeat center top;
+  cursor: pointer; /* hand-shaped cursor */
+}
+#bouton-admin {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent url(/media/images/icons/admin.png) no-repeat center top;
+  cursor: pointer; /* hand-shaped cursor */
+}
+#bouton-add-cal {
+  padding:0;
+  border:0;
+  cursor: pointer;
+  background:none;
+}
