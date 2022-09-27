@@ -7,7 +7,13 @@ uducq.univ.fr est l'adresse d'administration de l'outil et uducq.fr est le domai
 
 ## Prérequis
 - **phpCAS** doit être installé sur le serveur
-- **mod_rewrite** doit être activé
+- **mod_rewrite** doit être activé et paramétré ainsi pour rediriger les urls courtes vers la page redirect.php
+
+    ```
+    RewriteEngine On    
+    RewriteRule ^([0-9a-z\-]{1,40})$ redirect.php?url=$1 [L]```
+    ```
+
 
 ## Installation
 
@@ -18,3 +24,5 @@ Il y a deux dossiers à la racine du projet :
 
 
 Il faut également initialiser la base de données avec la structure présente dans le fichier uducq.sql. Cette application étant uniquement cassifiée (pas de formulaire de connexion de comptes locaux), il convient de remplacer le *admin_cas* présent dans ce fichier par le login CAS du premier administrateur de l'application.
+
+`sed -i 's/admin_cas/login_cas_admin_univ/' uducq.sql`
