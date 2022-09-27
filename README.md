@@ -11,7 +11,7 @@ uducq.univ.fr est l'adresse d'administration de l'outil et uducq.fr est le domai
 
     ```
     RewriteEngine On    
-    RewriteRule ^([0-9a-z\-]{1,40})$ redirect.php?url=$1 [L]```
+    RewriteRule ^([0-9a-z\-]{1,40})$ redirect.php?url=$1 [L]
     ```
 
 
