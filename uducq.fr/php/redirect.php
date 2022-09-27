@@ -1,6 +1,6 @@
 <?php
 
-require("../conf/config.php");
+require("../../conf/config.php");
 require("../lib/mysql.php");
 
 $long_url=getLongFromShortURL($_GET['url']);

@@ -2,7 +2,7 @@
 
 #error_reporting(E_ALL);
 
-include("../conf/config.php");
+include("../../conf/config.php");
 include("../lib/mysql.php");
 include("../lib/formulaires.php");
 include("../lib/Utils.php");

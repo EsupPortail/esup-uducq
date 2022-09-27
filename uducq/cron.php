@@ -2,7 +2,7 @@
 
 #Ce code positionne le code de retour http des liens de u2l dans la colonne last_http_respcode.
 
-include("conf/config.php");
+include("../conf/config.php");
 include("lib/mysql.php");
 
 #Connexion MySQL

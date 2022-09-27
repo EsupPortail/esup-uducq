@@ -1,6 +1,6 @@
 <?php
 
-require("../conf/config.php");
+require("../../conf/config.php");
 
 #Connexion MySQL
 function mysqlConnect($base)
