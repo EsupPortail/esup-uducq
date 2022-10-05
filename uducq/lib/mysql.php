@@ -150,6 +150,7 @@ function delURL($id_url)
 function isShortURLExist($shorturl)
 {
     global $db;
+    $shorturl=mysqli_real_escape_string($db, $shorturl);
     $sql = 'SELECT count(*) as nb FROM urls WHERE short_code="'.$shorturl.'"';
     $req = mysqli_query($db, $sql) or die('Erreur SQL !<br/>'.$sql.'<br/>'.mysqli_error());
     $resultat_nb = mysqli_fetch_assoc($req);
@@ -222,6 +223,7 @@ if ($_INSTANCE=="test") {
     function updateURLCounter($shorturl)
     {
         global $db;
+        $shorturl=mysqli_real_escape_string($db, $shorturl);
         $sql = 'UPDATE urls SET counter=counter+1 WHERE short_code="'.$shorturl.'"';
         $req = mysqli_query($db, $sql) or die('Erreur SQL !<br/>'.$sql.'<br/>'.mysqli_error());
     }
