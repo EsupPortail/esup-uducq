@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `urls`;
 CREATE TABLE IF NOT EXISTS `urls` (
   `id` int(11) NOT NULL,
   `long_url` varchar(20000) NOT NULL,
-  `short_code` varchar(20) NOT NULL,
+  `short_code` varchar(50) NOT NULL,
   `date_created` date NOT NULL,
   `counter` int(11) NOT NULL DEFAULT 0,
   `creator_uid` varchar(20) NOT NULL,
