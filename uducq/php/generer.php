@@ -22,13 +22,18 @@ echo "<section class='row'>
 if ((isset($error))&&(empty($error))) {
     //pas de pb, on traite
     echo formGenereURL($placeholder, $value);
+    $code = urlencode($value);
 ?>
     <p>
         <table align="center">
             <tr>
                 <td align="center">
                     <b>QR Code</b><br>
-                    <img src="qrcodegen.php?code=<?php echo urlencode($value); ?>">
+
+                    <img src="qrcodegen.php?code=<?php echo $code ?>"><br>
+                    <a href="qrcodegen.php?code=<?php echo $code ?>" download="qrcode.png">
+                        Télécharger
+                    </a>
                 </td>
             </tr>
         </table>

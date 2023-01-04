@@ -38,6 +38,9 @@ if ((isset($error))&&(empty($error))) {
     $shorturl=$_URL_REDUCTEUR."/".$shorturl;
     echo "<p>URL longue : <a href='$longurl'>$longurl</a></p>";
     echo "<p>URL courte : <a href='$shorturl'>$shorturl</a></p>";
+
+    $longcode  = urlencode($longurl);
+    $shortcode = urlencode($shorturl);
 ?>
 
     <p>
@@ -46,7 +49,11 @@ if ((isset($error))&&(empty($error))) {
                 <td>
                     <td align="center">
                         <b>QRCode de l'URL longue</b><br>
-                        <img src="qrcodegen.php?code=<?php echo urlencode($longurl); ?>">
+
+                        <img src="qrcodegen.php?code=<?php echo $longcode ?>"><br>
+                        <a href="qrcodegen.php?code=<?php echo $longcode ?>" download="long.png">
+                            Télécharger
+                        </a>
                     </td>
                 </td>
 
@@ -54,7 +61,11 @@ if ((isset($error))&&(empty($error))) {
 
                 <td align='center'>
                     <b>QRCode de l'URL courte</b><br>
-                    <img src="qrcodegen.php?code=<?php echo urlencode($shorturl); ?>">
+
+                    <img src="qrcodegen.php?code=<?php echo $shortcode; ?>"><br>
+                    <a href="qrcodegen.php?code=<?php echo $shortcode; ?>" download="short.png">
+                        Télécharger
+                    </a>
                 </td>
             </tr>
         </table>
