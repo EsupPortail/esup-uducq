@@ -22,7 +22,18 @@ echo "<section class='row'>
 if ((isset($error))&&(empty($error))) {
     //pas de pb, on traite
     echo formGenereURL($placeholder, $value);
-    echo "<p><table align='center'><tr><td align='center'><b>QR Code</b><br /><img src=\"qrcodegen.php?code=".urlencode($value)."\" /></td></tr></table></p>";
+?>
+    <p>
+        <table align="center">
+            <tr>
+                <td align="center">
+                    <b>QR Code</b><br>
+                    <img src="qrcodegen.php?code=<?php echo urlencode($value); ?>">
+                </td>
+            </tr>
+        </table>
+    </p>
+<?php
 } else {
     if (isset($error)) {
         echo "<div class='alert alert-warning' role='alert'>$error</div>";

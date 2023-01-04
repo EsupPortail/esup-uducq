@@ -38,8 +38,29 @@ if ((isset($error))&&(empty($error))) {
     $shorturl=$_URL_REDUCTEUR."/".$shorturl;
     echo "<p>URL longue : <a href='$longurl'>$longurl</a></p>";
     echo "<p>URL courte : <a href='$shorturl'>$shorturl</a></p>";
-    echo "<p><table align='center'><tr><td align='center'><b>QRCode de l'URL longue</b><br /><img src=\"qrcodegen.php?code=".urlencode($longurl)."\" /></td>";
-    echo "<td style='width:40px;'> </td><td align='center'><b>QRCode de l'URL courte</b><br /><img src=\"qrcodegen.php?code=".urlencode($shorturl)."\" /></td></tr></table></p>";
+?>
+
+    <p>
+        <table align="center">
+            <tr>
+                <td>
+                    <td align="center">
+                        <b>QRCode de l'URL longue</b><br>
+                        <img src="qrcodegen.php?code=<?php echo urlencode($longurl); ?>">
+                    </td>
+                </td>
+
+                <td style="width:40px;"></td>
+
+                <td align='center'>
+                    <b>QRCode de l'URL courte</b><br>
+                    <img src="qrcodegen.php?code=<?php echo urlencode($shorturl); ?>">
+                </td>
+            </tr>
+        </table>
+    </p>
+
+<?php
 } else {
     if (isset($error)) {
         echo "<div class='alert alert-warning' role='alert'>$error</div>";
